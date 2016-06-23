@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="eng">
+<head>
+	<title>Socket.IO chat</title>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="/js/main.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<div class="row">
+		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+			<ul id="messages"></ul>
+		</div>
+		<div  class="col-lg-3 col-md-3 col-sm-3 bg-info col-xs-3">
+			<ul id="people"></ul>
+		</div>
+	</div>
+
+	<div id='info' class='alert alert-warning alert-dismissible' role='alert'>
+		<strong>Warning!</strong> <span id='content'></span>
+	</div>
+
+	<!-- <div id="login"> -->
+		<form id="login" action="">
+			<div class="row form-group">
+				<div class="col-xs-10 col-lg-10">
+					<input class='form-control' type="text" id="name" placeholder="Your name">
+				</div>
+				<div class="col-xs-2 col-lg-2">
+					<button class='form-control btn btn-primary'>Send</button>
+				</div>
+		</div>
+		</form>
+	<!-- </div> -->
+
+	<!-- <div id="chat"> -->
+
+		<form id="chat" action="">
+			<div class="row form-group">
+				<div class="col-xs-10 col-lg-10">
+					<input class='form-control' type="text" id="msg" placeholder="Message">
+				</div>
+				<div class="col-xs-2 col-lg-2">
+					<button type='submit' id="send" class='form-control btn btn-primary'>Send</button>
+					<button id="reconnect" class='form-control btn btn-success' style='display:none;'>Reconnect</button>
+				</div>
+			</div>
+		</form>
+
+	<!-- <div class="row">
+		<div class="col-md-5 col-md-offset-1" id="login">
+			<form action="" class="form-inline" style="display: ">
+				<input type="text" class="input-small" placeholder="Your name" id="name">
+        <input type="button" name="join" id="join" value="Join" class="btn btn-primary">
+			</form>
+		</div>
+
+		<div class="col-md-5 col-md-offset-1" id="chat">
+			<form id="2" class="form-inline">
+          <input type="text" class="input" placeholder="Your message" id="msg">
+          <input type="button" name="send" id="send" value="Send" class="btn btn-success">
+      </form>
+		</div>
+	</div> -->
+
+</body>
+</html>
